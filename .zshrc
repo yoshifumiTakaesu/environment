@@ -37,5 +37,3 @@ alias vi='vim'
 #user path
 export PATH="$HOME/.rbenv/bin:$PATH" 
 eval "$(rbenv init - zsh)"
-
-#git Test
