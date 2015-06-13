@@ -26,6 +26,7 @@ setopt pushd_ignore_dups
 # alias
 alias ls='ls --color=auto'
 alias ll='ls -lF'
+alias lla='ls -AlF'
 alias la='ls -A'
 alias l='ls -CF'
 alias rm='rm -i'
