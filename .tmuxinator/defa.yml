@@ -1,0 +1,19 @@
+# ~/.tmuxinator/defa.yml
+
+name: defa
+root: ~/
+
+windows:
+        - window1:
+                layout: tiled
+                panes: 
+                        - pane1:
+                                - cd ~
+                                - echo "it's pane1" > pane1
+                                - vim pane1
+                        - pane2:
+                                - cd ~
+                                - echo "it's pane2" > pane2
+                                - vim pane2
+        - window2:
+#  - logs: tail -f log/development.log
