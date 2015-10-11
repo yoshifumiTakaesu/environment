@@ -3,8 +3,8 @@
 #
  
 # prompt
-#autoload -U colors
-#colors
+autoload -U colors
+colors
 PROMPT='[%n@%m]# '
 RPROMPT='[%d]'
  
