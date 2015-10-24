@@ -1,6 +1,15 @@
 #All directory
-t/
+*/
 
 # User ignore files
 *.ini
 *_history
+.bash_profile
+.gemrc
+.gitconfig
+.inputrc
+.lesshst
+.minttyrc
+.profile
+.ruby-version
+.zcompdump
