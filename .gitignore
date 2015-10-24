@@ -1,8 +1,5 @@
-#file and directory
-/*
-
-# Not ignore files
-!/.*
+#All directory
+t/
 
 # User ignore files
 *.ini
