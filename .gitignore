@@ -1,0 +1,9 @@
+#file and directory
+/*
+
+# Not ignore files
+!/.*
+
+# User ignore files
+*.ini
+*_history

@@ -9,6 +9,9 @@ alias la='ls -a'
 alias lla='ll -a'
 alias diff='colordiff'
 alias less='less -R'
+alias drop='cd /cygdrive/d/Dropbox/'
+alias gdrive='cd /cygdrive/d/NextGcWork/'
+
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
