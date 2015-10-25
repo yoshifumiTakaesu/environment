@@ -1,15 +1,13 @@
 #All directory
 */
 
+#All Files
+/*
+
 # User ignore files
 *.ini
-*_history
-.bash_profile
-.gemrc
-.gitconfig
-.inputrc
-.lesshst
-.minttyrc
-.profile
-.ruby-version
-.zcompdump
+/.*
+!/.bashrc
+!/.tmux.conf
+!/.zshrc
+
