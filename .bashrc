@@ -9,8 +9,8 @@ alias la='ls -a'
 alias lla='ls -al'
 alias diff='colordiff'
 alias less='less -R'
-alias drop='cd /cygdrive/d/Dropbox/'
-alias gdrive='cd /cygdrive/d/NextGcWork/'
+alias vi='vim'
+alias tree='tree -L'
 
 
 # Source global definitions

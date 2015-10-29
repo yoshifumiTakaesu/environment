@@ -9,4 +9,5 @@
 !/.bashrc
 !/.tmux.conf
 !/.zshrc
-
+!/.vimrc
+!.vim
