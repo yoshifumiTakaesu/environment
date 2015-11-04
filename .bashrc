@@ -11,7 +11,7 @@ alias diff='colordiff'
 alias less='less -R'
 alias vi='vim'
 alias tree='tree -L'
-alias le='vim -R'
+alias lv='vim -R'
 
 
 # Source global definitions
