@@ -12,11 +12,17 @@ alias less='less -R'
 alias vi='vim'
 alias tree='tree -L'
 alias lv='vim -R'
-
+alias shasum='sha1sum'
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
+fi
+
+# Nvm source definitinons
+if [ -f ~/.nvm/nvm.sh ]; then
+  source ~/.nvm/nvm.sh
+  nvm alias default v0.12.5 > /dev/null
 fi
 
 # export etc....
