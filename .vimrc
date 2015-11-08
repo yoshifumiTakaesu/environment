@@ -47,6 +47,8 @@ NeoBundle 'vim-scripts/AnsiEsc.vim'
 NeoBundle 'bronson/vim-trailing-whitespace'
 " less用のsyntaxハイライト
 NeoBundle 'KohPoll/vim-less'
+"syntax + 自動compole
+"NeoBundle 'kchmck/vim-coffee-script'
 
 " 余談: neocompleteは合わなかった。ctrl+pで補完するのが便利
 
@@ -157,9 +159,19 @@ au FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vspli
 " ESCキーを2回押すと終了する
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
-""""""""""""""""""""""""""""""
 
-" http://inari.hatenablog.com/entry/2014/05/05/231307
+" vimにcoffeeファイルタイプを認識させる
+au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+" インデント設定
+autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
+" オートコンパイル
+"保存と同時にコンパイルする
+autocmd BufWritePost *.coffee silent make!
+"エラーがあったら別ウィンドウで表示
+autocmd QuickFixCmdPost * nested cwindow | redraw!
+" Ctrl-cで右ウィンドウにコンパイル結果を一時表示する
+nnoremap <silent> <C-C> :CoffeeCompile vert <CR><C-w>h
+
 """"""""""""""""""""""""""""""
 " 全角スペースの表示
 """"""""""""""""""""""""""""""

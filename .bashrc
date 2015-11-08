@@ -1,7 +1,6 @@
 # .bashrc
 
 # User specific aliases and functions
-
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -30,7 +29,13 @@ if [ -f /usr/bin/python3.3 ]; then
 	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.3
 fi
 
+# git completion
+if [ -f ~/.git-completion.bash ]; then
+  source ~/.git-completion.bash
+fi
 
-# color setting 
+
+
+# color setting
 # \u -> user, \w -> path, \$ -> [root #] [user $]
 PS1='\[\e[0;31m\]\u\[\e[m\] @\[\e[0;31m\]\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]\$ \[\e[m\]\[\e[0;32m\]'
