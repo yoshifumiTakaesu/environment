@@ -171,6 +171,8 @@ autocmd BufWritePost *.coffee silent make!
 autocmd QuickFixCmdPost * nested cwindow | redraw!
 " Ctrl-cで右ウィンドウにコンパイル結果を一時表示する
 nnoremap <silent> <C-C> :CoffeeCompile vert <CR><C-w>h
+" Ctrl-tでNERDTreeを表示
+nnoremap <silent><C-t> :NERDTreeToggle<CR>
 
 """"""""""""""""""""""""""""""
 " 全角スペースの表示
