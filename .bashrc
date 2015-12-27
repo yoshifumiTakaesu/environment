@@ -12,6 +12,7 @@ alias vi='vim'
 alias tree='tree -L'
 alias lv='vim -R'
 alias shasum='sha1sum'
+alias gitlog='git log --graph'
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
