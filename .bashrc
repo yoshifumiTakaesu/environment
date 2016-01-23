@@ -6,13 +6,19 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias la='ls -a'
 alias lla='ls -al'
-alias diff='colordiff'
 alias less='less -R'
 alias vi='vim'
 alias tree='tree -L'
 alias lv='vim -R'
 alias shasum='sha1sum'
 alias gitlog='git log --graph'
+alias crontab='crontab -i'
+
+# colordiff check 
+if [ -f /usr/local/bin/colordiff ]; then
+  alias diff='colordiff'
+fi
+
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -45,3 +51,4 @@ fi
 # color setting
 # \u -> user, \w -> path, \$ -> [root #] [user $]
 PS1='\[\e[0;31m\]\u\[\e[m\] @\[\e[0;31m\]\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]\$ \[\e[m\]\[\e[0;32m\]'
+
