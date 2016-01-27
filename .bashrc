@@ -55,7 +55,7 @@ fi
 # go setup
 if [ -d $HOME/go ]; then
   export GOROOT=$HOME/go
-  export GOPATH=/usr/local/go/
+  export GOPATH=/usr/local/go
   export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 fi
 
