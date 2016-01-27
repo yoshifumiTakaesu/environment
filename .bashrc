@@ -59,6 +59,14 @@ if [ -d $HOME/go ]; then
   export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 fi
 
+# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+if [ -d $HOME/cocos_work ]; then
+  export COCOS_CONSOLE_ROOT=/root/cocos_work/tools/cocos2d-console/bin
+  export PATH=$COCOS_CONSOLE_ROOT:$PATH
+  export COCOS_TEMPLATES_ROOT=/root/cocos_work/templates
+  export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+fi
+
 # color setting
 # \u -> user, \w -> path, \$ -> [root #] [user $]
 PS1='\[\e[0;31m\]\u\[\e[m\] @\[\e[0;31m\]\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]\$ \[\e[m\]\[\e[0;32m\]'
