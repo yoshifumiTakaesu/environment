@@ -39,6 +39,10 @@ fi
 # git completion
 if [ -f ~/.git-completion.bash ]; then
   source ~/.git-completion.bash
+else
+  wget https://github.com/git/git/raw/master/contrib/completion/git-completion.bash -P ~/
+  mv git-completion.bash .git-completion.bash
+  source ~/.git-completion.bash
 fi
 
 # vim setup
