@@ -28,7 +28,7 @@ fi
 # Nvm source definitinons
 if [ -f ~/.nvm/nvm.sh ]; then
   source ~/.nvm/nvm.sh
-  nvm alias default v0.12.5 > /dev/null
+  nvm alias default v0.12.9 > /dev/null
 fi
 
 # export etc....
@@ -50,6 +50,13 @@ if [ ! -d ~/.vim ]; then
   mkdir -p ~/.vim/bundle
   git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
   git clone https://github.com/Shougo/vimproc ~/.vim/bundle/vimproc
+fi
+
+# go setup
+if [ -d $HOME/go ]; then
+  export GOROOT=$HOME/go
+  export GOPATH=/usr/local/go/
+  export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 fi
 
 # color setting
