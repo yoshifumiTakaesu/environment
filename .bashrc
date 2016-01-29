@@ -15,10 +15,12 @@ alias gitlog='git log --graph'
 alias crontab='crontab -i'
 
 # colordiff check 
-if [ -f /usr/local/bin/colordiff ]; then
+which colordiff > /dev/null
+ret=$?
+
+if [ $ret -eq 0 ] ; then
   alias diff='colordiff'
 fi
-
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -70,4 +72,3 @@ fi
 # color setting
 # \u -> user, \w -> path, \$ -> [root #] [user $]
 PS1='\[\e[0;31m\]\u\[\e[m\] @\[\e[0;31m\]\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]\$ \[\e[m\]\[\e[0;32m\]'
-
