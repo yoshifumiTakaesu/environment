@@ -70,10 +70,10 @@ if [ -d $HOME/cocos_work ]; then
 fi
 
 # rbenv setup
-if [ -d $HOME/.rbenv ]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
-fi
+#if [ -d $HOME/.rbenv ]; then
+#  export PATH="$HOME/.rbenv/bin:$PATH"
+#  eval "$(rbenv init -)"
+#fi
 
 # color setting
 # \u -> user, \w -> path, \$ -> [root #] [user $]
