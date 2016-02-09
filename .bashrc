@@ -69,6 +69,12 @@ if [ -d $HOME/cocos_work ]; then
   export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 fi
 
+# rbenv setup
+#if [ -d $HOME/.rbenv ]; then
+#  export PATH="$HOME/.rbenv/bin:$PATH"
+#  eval "$(rbenv init -)"
+#fi
+
 # color setting
 # \u -> user, \w -> path, \$ -> [root #] [user $]
 PS1='\[\e[0;31m\]\u\[\e[m\] @\[\e[0;31m\]\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]\$ \[\e[m\]\[\e[0;32m\]'
