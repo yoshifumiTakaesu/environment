@@ -13,6 +13,7 @@ alias lv='vim -R'
 alias shasum='sha1sum'
 alias glog='git log --graph'
 alias gst='git status'
+alias gdiff='git diff'
 alias crontab='crontab -i'
 
 # colordiff check 
