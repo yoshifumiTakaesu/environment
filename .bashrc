@@ -11,7 +11,8 @@ alias vi='vim'
 alias tree='tree -L'
 alias lv='vim -R'
 alias shasum='sha1sum'
-alias gitlog='git log --graph'
+alias glog='git log --graph'
+alias gst='git status'
 alias crontab='crontab -i'
 
 # colordiff check 
@@ -28,8 +29,8 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # Nvm source definitinons
-if [ -f ~/.nvm/nvm.sh ]; then
-  source ~/.nvm/nvm.sh
+if [ -f $HOME/.nvm/nvm.sh ]; then
+  source $HOME/.nvm/nvm.sh
   nvm alias default v0.12.9 > /dev/null
 fi
 
@@ -39,19 +40,19 @@ if [ -f /usr/bin/python3.3 ]; then
 fi
 
 # git completion
-if [ -f ~/.git-completion.bash ]; then
-  source ~/.git-completion.bash
+if [ -f $HOME/.git-completion.bash ]; then
+  source $HOME/.git-completion.bash
 else
-  wget https://github.com/git/git/raw/master/contrib/completion/git-completion.bash -P ~/
-  mv git-completion.bash .git-completion.bash
-  source ~/.git-completion.bash
+  wget https://github.com/git/git/raw/master/contrib/completion/git-completion.bash -P $HOME/
+  mv $HOME/git-completion.bash $HOME/.git-completion.bash
+  source $HOME/.git-completion.bash
 fi
 
 # vim setup
-if [ ! -d ~/.vim ]; then
-  mkdir -p ~/.vim/bundle
-  git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-  git clone https://github.com/Shougo/vimproc ~/.vim/bundle/vimproc
+if [ ! -d $HOME/.vim ]; then
+  mkdir -p $HOME/.vim/bundle
+  git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim
+  git clone https://github.com/Shougo/vimproc $HOME/.vim/bundle/vimproc
 fi
 
 # go setup
